@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preferencias de Usuario</title>
+</head>
+<body>
+<h1>Preferencias de Usuario</h1>
+<form id="preferences-form">
+    <label for="name">Nombre:</label>
+    <input type="text" id="name" required><br><br>
+    
+    <label for="background-color">Color de fondo:</label>
+    <input type="color" id="background-color" required><br><br>
+    
+    <label for="text-color">Color de letra:</label>
+    <input type="color" id="text-color" required><br><br>
+    
+    <button type="submit">Guardar preferencias</button><br><br>
+</form>
+<a href="../index.html"><button type="button">Volver al portfolio</button></a>
+
+<style>
+    html{
+        text-align: center;
+        font-size: 30px;
+    }
+    button{
+        padding: 15px;
+        font-size: 25px;
+        border-radius: 1em;
+    }
+    input{
+        font-size: 20px;
+    }
+</style>
+
+<script>
+document.getElementById('preferences-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const backgroundColor = document.getElementById('background-color').value;
+    const textColor = document.getElementById('text-color').value;
+    
+    localStorage.setItem('name', name);
+    localStorage.setItem('background-color', backgroundColor);
+    localStorage.setItem('text-color', textColor);
+    
+    window.location.href = 'greeting.html'; // Redirigir a la página de saludo
+});
+</script>
+</body>
+</html>

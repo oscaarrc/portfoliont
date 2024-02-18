@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Portfolio de Óscar Ramos Castellano</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- EMPIEZAN: Scripts que conectan con email.js -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        emailjs.init('mtIzckb_jf5vjArZe')
+    </script>
+    <!-- TERMINAN: cripts que conectan con email.js -->
+
+    <!-- FUENTES -->
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- STARTS STARS BACKGROUND -->
+    <div class="allstars">
+        <div id="stars-00"></div>
+        <div id="stars-01"></div>
+        <div id="stars-02"></div>
+    </div>
+    
+    <!-- ENDS STARS BACKGROUND -->
+
+    <div class="container">
+        <section id="index"></section>
+        <header class="sidebar">        
+            <div class="profile">
+                <a href="#index"><img class="logo" src="img/logo.png" alt="Logo" ></a>
+                <p data-es="Desarrollador Web" data-en="Web Developer">Web Developer</p>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="#about" data-es="Sobre mí" data-en="About me">About me</a></li>
+                    <li><a href="#projects" data-es="Proyectos" data-en="Projects">Projects</a></li>
+                    <li><a href="#contact" data-es="Contacto" data-en="Contact">Contact</a></li>
+                    <li><a href="htmls/technologies.html"data-es="Habilidades" data-en="Skills">Skills</a></li>
+                    <li><a href="htmls/reproductor.html"><img src="img/caca.png" alt=""></a></li>
+                </ul>
+            </nav>
+
+            <div class="icons">
+                <a href="https://twitter.com/rk__dev"><img src="img/icon-twitterx.png" alt=""></a>
+                <a href="https://www.instagram.com/oscaar_rc/"><img src="img/icon-instagram.png" alt=""></a>
+                <a href="https://github.com/oscaarrc"><img src="img/icon-github.png" alt=""></a>
+            </div>
+        </header>
+
+        <div class="nav">
+            <div class="nav__container">
+                <a href="#menu" class="nav__menu alignTitle">
+                    <div class="logoIMG nav__icon"></div>
+                </a>
+    
+                <a href="#" class="nav__menu nav__menu--second">
+                    <img src="./img/cerrar.png" class="nav__icon ">
+                </a>
+    
+                <ul class="dropdown" id="menu">
+                    <li><a class="dropdown__link" href="#index" data-es="Inicio" data-en="Home">Home</a></li>
+                    <li><a class="dropdown__link" href="#about" data-es="Sobre mí" data-en="About me">About me</a></li>
+                    <li><a class="dropdown__link" href="#projects" data-es="Proyectos" data-en="Projects">Projects</a></li>
+                    <li><a class="dropdown__link" href="#contact" data-es="Contacto" data-en="Contact">Contact </a></li>
+                    <li><a class="dropdown__link" href="htmls/technologies.html"data-es="Tecnologías" data-en="Technologies">Technologies </a></li>
+                    <li class="icons al-icons">
+                        <a href="https://twitter.com/zanza_xc"><img src="img/icon-twitterx.png" alt=""></a>
+                        <a href="https://www.instagram.com/oscaar_rc/"><img src="img/icon-instagram.png" alt=""></a>
+                        <a href="https://github.com/oscaarrc"><img src="img/icon-github.png" alt=""></a>
+                    </li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <div class="align-bar">
+            <div class="horizontal-bar">
+                <!-- Rounded switch -->
+                <div>
+                    <label class="switch">
+                        <input type="checkbox" onclick="changeLanguage()">
+                        <span class="slider round"></span>
+                </div>
+                <img class="flag" id="flag" src="img/UK_flag.png" alt="">
+                </label>
+            </div>
+        </div>
+        
+
+        <main>
+            <section class="port-Index">
+                <div class="typed-output">
+                    <h1 data-es="Soy" data-en="I'm a">I'm a </h1>
+                    <span class="typed"></span>
+                    <div id="txt-variations">
+                        <h1>DEVELOPER</h1>
+                        <h1>PROGRAMMER</h1>
+                        <h1>FULLSTACK</h1>
+                    </div>
+                </div>
+            </section>
+
+
+            
+            <section id="about">
+            <div class="port-About">
+                <div class="card" draggable="true">
+                    <div class="cardText">
+                        <h1 data-es="¡Hola!" data-en="Hi there!">Hi there!</h1>
+                        <p class="presentation" 
+                        data-es="Soy Óscar Ramos Castellano, un apasionado desarrollador web de 21 años en búsqueda de oportunidades en la creación de experiencias digitales."
+                        data-en="I'm Óscar Ramos Castellano, a passionate 21-year-old web developer looking for opportunities in creating digital experiences." >
+                            I'm Óscar Ramos Castellano, a passionate 21-year-old web developer looking for opportunities in creating digital experiences.
+                        </p>
+                        <p class="presentation"
+                            data-es="Estoy familiarizado con tecnologías como HTML, CSS, Java, JavaScript o PHP, que me permiten construir sitios web dinámicos y funcionales, aunque siempre estoy en busca de nuevos desafíos para expandir mis habilidades y crear soluciones innovadoras."
+                            data-en="I'm familiar with technologies such as HTML, CSS, Java, JavaScript or PHP, which allow me to build dynamic and functional websites, although I'm always looking for new challenges to expand my skills and create innovative solutions." >
+                            I'm familiar with technologies such as HTML, CSS, Java, JavaScript or PHP, which allow me to build dynamic and functional websites, although I'm always looking for new challenges to expand my skills and create innovative solutions.
+                        </p>
+
+                        <p class="presentation"
+                        data-es="¡Únete a mí en el viaje de la programación y descubre cómo podemos llevar tu presencia en línea al siguiente nivel!"
+                        data-en="Join me on the programming journey and find out how we can take your online presence to the next level!">
+                            Join me on the programming journey and find out how we can take your online presence to the next level!
+                        </p>
+                    </div>
+                    <img src="img/aboutMe_img.png" alt="">
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+        <section id="projects">
+            <div class="port-Projects">
+                <div class="titleProjects c-img"><img class="imgProject" src="img/projects_TITLE.png" id="imgProject" alt=""></div>
+                <div class="titleProjects c-img--reflect"><img class="imgProject" src="img/projects_TITLE.png" id="imgProject_REFLECT" alt=""></div>
+                <div class="wrap">
+                    <a href="https://github.com/oscaarrc/ProjectG.git">
+                        <div class="tile"> 
+                            <img class="med-op" src='./img/genshin_PROJECT.png'/>
+                            <div class="text">
+                                <h1>Project G</h1>
+                                <h2 class="animate-text" data-en="Developed on PHP" data-es="Desarrollado en PHP">Developed on PHP</h2>
+                                <p class="animate-text" data-en="This website allows you to create teams with your favourite Genshin Impact characters. You can create an account to save your best teams. "
+                                data-es="Esta página web te permite crear equipos con tus personajes favoritos de Genshin Impact. Podrás crear una cuenta para guardar tus mejores equipos.">
+                                    This website allows you to create teams with your favourite Genshin Impact characters. You can create an account to save your best teams. 
+                                <br><br></p>
+                                <p class="animate-text" data-en="Authors: @Javiiqntanaa25 , @oscaarrc" data-es="Autores: @Javiiqntanaa25 , @oscaarrc">Authors: @Javiiqntanaa25 , @oscaarrc</p>
+                                    
+                            </div>
+                            
+                        </div>
+                    </a>
+                    
+                    <a href="https://github.com/oscaarrc/bienesRaices.git">
+                        <div class="tile"> 
+                            <img class="med-op" src='img/bienesRaices_PROJECTS.png'/>
+                            <div class="text">
+                                <h1>Bienes raíces</h1>
+                                <h2 class="animate-text" data-en="Developed on PHP" data-es="Desarrollado en PHP">Developed on PHP</h2>
+                                <p class="animate-text" data-en="This website was developed for a real estate agency. It has an administrator mode with a CRUD that controls the properties."
+                                data-es="Esta página web fue desarrollada para una inmobiliaria. Dispone con un modo administrador con un CRUD que ejerce el control de las propiedades.">
+                                This website was developed for a real estate agency. It has an administrator mode with a CRUD that controls the properties.
+                                <p class="animate-text" data-en="Authors: @oscaarrc" data-es="Autores: @oscaarrc">Authors: @oscaarrc</p>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/oscaarrc/animationStars.git">
+                        <div class="tile"> 
+                            <img class="full-op" src="./img/stars_PROJECT.png">
+                            <div class="text">
+                                <h1>Stars animation</h1>
+                                <h2 class="animate-text" data-en="Created with CSS" data-es="Creado con CSS">Created with CSS</h2>
+                                <p class="animate-text" data-en="This website was developed with html and css only. It is a simple animation that gives the feeling of going among the stars."
+                                data-es="Esta página web fue desarrollado únicamente con html y css. Es una animación sencilla que da la sensación de adentrarse entre las estrellas.">
+                                This website was developed with html and css only. It is a simple animation that gives the feeling of going among the stars.
+                                <p class="animate-text" data-en="Authors: @oscaarrc" data-es="Autores: @oscaarrc">Authors: @oscaarrc</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="alignSeeMore">
+                    <div class="seeMore">
+                        <a href="htmls/projects.html">
+                            <span id="viewMore-dots"></span>
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section id="contact">
+
+            <div class="titleProjects c-img cont"><img class="imgContact" src="img/contact_TITLE.png" id="imgContact" alt=""></div>
+            <div class="titleProjects c-img--reflect cont"><img class="imgContact" src="img/contact_TITLE.png" id="imgContact_REFLECT" alt=""></div>
+            <p id="msg"></p>
+            <div class="port-contact">
+                
+                <div class="login-box"> 
+                    <form method="POST" id="formEmail">
+                        <div class="user-box">
+                            <span id="nameSpan"></span><input id="name" type="text" name="name" required>
+                            <label data-en="Full name" data-es="Nombre y apellidos">Full name</label>
+                        </div>
+                        <div class="user-box">
+                            <span id="emailSpan"></span><input id="email" type="email" name="email" required>
+                            <label data-en="Email" data-es="Correo electrónico">Email</label>
+                        </div>
+                        <div class="user-box user-text">
+                            <span id="messageSpan"></span><textarea id="message" name="message" rows="4" cols="50" required></textarea>
+                            <label for="message" data-en="Message" data-es="Mensaje">Message</label>
+                        </div>
+
+
+                        <div class="align-btn">
+                            <button type="button" id="submitForm" onclick="enviarFormulario()" >
+                                <a>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                    Submit
+                                </a>
+                            </button>
+                        </div>
+                    </form>
+                  </div>
+            </div>
+        </section>
+            
+        </main>
+    </div>
+    <!-- SCRIPTS -->
+    <!-- Incluye Typed.js -->
+    <script src="./config/typed.js"></script>
+    <!-- Incluye vanilla-tilt.js -->
+    <script src="./config/vanilla.js"></script>
+    <!-- Incluye la clase que verifica la validez del formulario -->
+    <script src="./js/classVerificar.js"></script>
+    <!-- Incluye todos los scripts del index -->
+    <script src="index.js"></script>
+
+</body>
+</html>

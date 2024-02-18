@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saludo</title>
+</head>
+<body>
+
+<script>
+    // Verificar si hay preferencias guardadas
+    const name = localStorage.getItem('name');
+    const backgroundColor = localStorage.getItem('background-color');
+    const textColor = localStorage.getItem('text-color');
+    
+    if (name && backgroundColor && textColor) {
+        // Mostrar el saludo con las preferencias guardadas
+        document.body.style.backgroundColor = backgroundColor;
+        document.body.style.display = "flex";
+        document.body.style.flexDirection = "column";
+        document.body.style.justifyContent = "center";
+        document.body.style.alignItems = "center";
+        document.body.style.fontSize = "50px";
+        document.body.style.color = textColor;
+        document.body.innerHTML = `<h1>Hola, ${name}!</h1><button onclick="clearPreferences()"
+        style="font-size: 16px; padding: 10px; border-radius: 1em; background-color: white;">Borrar preferencias</button>`;
+    } else {
+        // Redirigir a la página de preferencias si no hay preferencias guardadas
+        window.location.href = 'preferences.html';
+    }
+    
+    function clearPreferences() {
+        // Borrar todas las preferencias
+        localStorage.removeItem('name');
+        localStorage.removeItem('background-color');
+        localStorage.removeItem('text-color');
+        window.location.href = 'preferences.html'; // Redirigir a la página de preferencias
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reproductor.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
+    <title>Reproductor</title>
+    
+</head>
+<body>
+    <h1 class="titleVideos">Reproductor de vídeos</h1>
+    <div class="videos">
+        <div class="video" id="menuvideo">
+            <video id="video" width="720" height="406" src="../img/musical_hamilton.mp4"> </video>
+            <div class="menuvideo" id="controles">
+                <div class="btvideo btninicio" id="inicio"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-track-prev" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M21 5v14l-8 -7z" />
+                    <path d="M10 5v14l-8 -7z" />
+                </svg>
+                </div>
+                <div class="btvideo retroceder" id="retroceder"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rewind-backward-10" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M7 9l-3 -3l3 -3" />
+                    <path d="M15.997 17.918a6.002 6.002 0 0 0 -.997 -11.918h-11" />
+                    <path d="M6 14v6" />
+                    <path d="M9 15.5v3a1.5 1.5 0 0 0 3 0v-3a1.5 1.5 0 0 0 -3 0z" />
+                </svg> </div>
+                <div class="btvideo" id="pausa"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="28" height="28" viewBox="0 0 24 24" stroke-width="1" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M7 4v16l13 -8z" />
+                </svg> </div>
+                <div class="btvideo avanzar" id="avanzar"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rewind-forward-10" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M17 9l3 -3l-3 -3" />
+                    <path d="M8 17.918a5.997 5.997 0 0 1 -5 -5.918a6 6 0 0 1 6 -6h11" />
+                    <path d="M12 14v6" />
+                    <path d="M15 15.5v3a1.5 1.5 0 0 0 3 0v-3a1.5 1.5 0 0 0 -3 0z" />
+                </svg> 
+                </div>
+                <div class="btvideo finvideo" id="fin"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-track-next" width="28" height="28" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M3 5v14l8 -7z" />
+                    <path d="M14 5v14l8 -7z" />
+                </svg>
+
+                </div>
+                <input class="volume" type="range" id="volume" min="0" max="1" step="0.1" value="1">
+                <div class="btvide fullscreen" id="fullscreen">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-maximize" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M4 8v-2a2 2 0 0 1 2 -2h2" />
+                        <path d="M4 16v2a2 2 0 0 0 2 2h2" />
+                        <path d="M16 4h2a2 2 0 0 1 2 2v2" />
+                        <path d="M16 20h2a2 2 0 0 0 2 -2v-2" />
+                      </svg>
+                </div>
+
+                <progress id="progressBar" value="0" max="100"></progress>
+            </div>
+        </div>
+        <div class="listaderep">
+            <div class="cont">
+                <div class="min" id="hamilton">
+                    <p class="titulovid">Hamilton</p>
+                </div>
+                <div class="min"  id="lalaland">
+                    <p class="titulovid">La la land</p>
+                </div>
+                <div class="min" id="dearEvanHansen">
+                    <p class="titulovid">Dear Evan Hansen</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="indexDB">
+        <h2>Listado de musicales</h2>
+
+        <form id="musical-form">
+            <label for="title">Título:</label>
+            <input type="text" id="title" required>
+            <label for="composer">Compositor:</label>
+            <input type="text" id="composer" required>
+            <button class="sub" type="submit">Añadir Musical</button>
+        </form>
+        
+        <ul id="musical-list"></ul>
+    </div>
+
+
+
+
+
+    
+
+    
+    
+    
+    <div class="algnMap">
+        <h1>Mapa con geolocation</h1>
+        <div id="map"></div>
+    </div>
+    
+    <div class="algnCookies">
+        <div id="cookieDialog" class="cookie-dialog">
+            <p>¿Aceptas el uso de cookies?</p>
+            <div class="buttonsc">
+                <button id="acceptCookies">Aceptar</button>
+                <button id="rejectCookies">Rechazar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="algnBtnRef">
+        <a href="./greeting.html"><button class="refPage">Página de preferencias</button></a>
+    </div>
+    
+    
+
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="../js/geolocation.js"></script>
+    <script src="../js/menuvideo.js"></script>
+    <script src="../js/newMusical.js"></script>
+</body>
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/projects.css">
+    <title>Projects</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header-bar">
+            <div class="al-Logo">
+                <a href="../index.html"><div class="logo"></div></a>
+                <img src="" alt="">
+            </div>
+            <ul class="slider-menu">
+                <li onclick="filtrarProyectos('todos')">Todos</li>
+                <li onclick="filtrarProyectos('php')">PHP</li>
+                <li onclick="filtrarProyectos('javascript')">JavaScript</li>
+                <li onclick="filtrarProyectos('css')">CSS</li>
+                <li onclick="filtrarProyectos('java')">Java</li>
+            </ul>
+        </div>
+    </div>
+    <div class="nav">
+        <div class="nav__container">
+            <a href="#menu" class="nav__menu">
+                <img src="../img/menu.png" class="nav__icon">
+            </a>
+
+            <a href="#" class="nav__menu nav__menu--second">
+                <img src="../img/cerrar.png" class="nav__icon ">
+            </a>
+
+            <ul class="dropdown" id="menu">
+
+                <li class="dropdown__list">
+                    <a href="../index.html" class="dropdown__link">
+                        <img src="../img/logo_mini.png" class="dropdown__icon">
+                        <span class="dropdown__span">Portfolio</span>
+                    </a>
+                </li>
+
+                <li class="dropdown__list">
+                    <a href="#" class="dropdown__link">
+                        <img src="../img/filter.png" class="dropdown__icon">
+                        <span class="dropdown__span">Projects filter</span>
+                        <img src="../img/arrow.png" class="dropdown__arrow">
+
+                        <input type="checkbox" class="dropdown__check">
+                    </a>
+
+                    <div class="dropdown__content">
+
+                        <ul class="dropdown__sub">
+                            <li class="dropdown__li" onclick="filtrarProyectos('todos')"><a href="#" class="dropdown__anchor">Todos</a></li>
+                            <li class="dropdown__li" onclick="filtrarProyectos('php')"><a href="#" class="dropdown__anchor">PHP</a></li>
+                            <li class="dropdown__li" onclick="filtrarProyectos('javascript')"><a href="#" class="dropdown__anchor">JavaScript</a></li>
+                            <li class="dropdown__li" onclick="filtrarProyectos('css')"><a href="#" class="dropdown__anchor">CSS</a></li>
+                            <li class="dropdown__li" onclick="filtrarProyectos('java')"><a href="#" class="dropdown__anchor">Java</a></li>
+
+
+                        </ul>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="title">
+        <img src="../img/projects_TITLE.png" alt="title">
+    </div>
+    <div class="team-products" >
+        <div class="product" data-lenguaje="php">
+            <div class="product-overlay">
+    
+            </div>
+            <div class="content">
+                <img src="../img/genshin_PROJECT.png" itemprop="image">
+            </div>
+            <div class="content-details">
+                <a class="name" href="https://github.com/oscaarrc/ProjectG.git">
+                    PROJECT G
+                </a>
+                <div class="desc">
+                    Developed on PHP
+                </div>
+            </div>
+        </div>
+        <div class="product" data-lenguaje="css">
+            <div class="product-overlay">
+    
+            </div>
+            <div class="content">
+                <img src="../img/stars_PROJECT.png" itemprop="image">
+            </div>
+            <div class="content-details">
+                <a class="name" href="https://github.com/oscaarrc/animationStars.git">
+                    STARS ANIMATION
+                </a>
+                <div class="desc">
+                    Created with HTML and CSS only
+                </div>
+            </div>
+        </div>
+        <div class="product" data-lenguaje="php">
+            <div class="product-overlay">
+    
+            </div>
+            <div class="content">
+                <img src="../img/bienesRaices_PROJECTS.png" itemprop="image">
+            </div>
+            <div class="content-details">
+                <a class="name" href="https://github.com/oscaarrc/bienesRaices.git">
+                    BIENES RAÍCES
+                </a>
+                <div class="desc">
+                    Developed on PHP
+                </div>
+            </div>
+        </div>
+        <div class="product" data-lenguaje="javascript">
+            <div class="product-overlay">
+    
+            </div>
+            <div class="content">
+                <img src="../img/porfolioIMG.jpg" itemprop="image">
+            </div>
+            <div class="content-details">
+                <a class="name" href="https://github.com/oscaarrc/portfolio.git">
+                    PORTFOLIO
+                </a>
+                <div class="desc">
+                    Developed with HTML, CSS, JS and Vanilla JS.
+                </div>
+            </div>
+        </div>
+        <div class="product p5" data-lenguaje="java">
+            <div class="product-overlay">
+    
+            </div>
+            <div class="content">
+                <img src="../img/cine_PROJECT.png" itemprop="image">
+            </div>
+            <div class="content-details">
+                <a class="name" href="https://github.com/oscaarrc/proyecto_cine.git">
+                    PROYECTO CINE
+                </a>
+                <div class="desc">
+                    Developed on Java
+                </div>
+            </div>
+        </div>
+        <div class="product">
+            <div class="product-overlay">
+    
+            </div>
+            <div class="content">
+                <img class="covered" src="../img/coming_soon.png" itemprop="image">
+            </div>
+            <div class="content-details">
+                <a class="name">
+                    COMING SOON
+                </a>
+                <div class="desc">
+                    Oops, we seem to be under renovation, stop by soon!
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/projectsJs.js"></script>
+</html>
